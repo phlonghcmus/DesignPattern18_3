@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TG0wxbw8d8ZyftVf4ypqknZJIu6CmRTAPnoXny8092lIHNfRbxR2S/SpHHGBc0GUCwYqvk0aQGpOk2xQ01h6tQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\phlon\\OneDrive\\Desktop\\Project\\Project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\phlon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
