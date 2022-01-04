@@ -1,4 +1,5 @@
 ﻿using Project.ValidationFarmework.validator;
+using Project.ValidationFarmework.violation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,18 +14,24 @@ namespace Project.ValidationFarmework.validation
         {
         }
 
-        public void validate(Object o)
+        public HashSet<IViolation> validate(Object o)
         {
+            HashSet<IViolation> violations = new HashSet<IViolation>();
             foreach (var item in o.GetType().GetProperties())
             {
-                Console.WriteLine(item.Name);
                 object[] annotations = item.GetCustomAttributes(false);
                 foreach (Attribute attr in annotations)
                 {
-                    /*Validator validator = ValidatorFactory.create(attr.GetType().Name);*/
-                    Console.WriteLine(attr.GetType().Name);
+                    ValidatorFactory validatorFactory = new ValidatorFactory();
+                    Validator validator = validatorFactory.create(attr.GetType().Name);
+                    IViolation violation = validator.validate(item, o);
+                    if (violation.getValid() == false)
+                    {
+                        violations.Add(violation);
+                    }
                 }
-            }    
+            }
+            return violations;
         }
     }
 }

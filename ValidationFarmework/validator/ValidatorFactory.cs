@@ -8,11 +8,6 @@ namespace Project.ValidationFarmework.validator
 {
     public class ValidatorFactory
     {
-        private static ValidatorFactory instance = new ValidatorFactory();
-        public static ValidatorFactory getInstance()
-        {
-            return instance;
-        }
         private static Dictionary<string, Validator> validatorMap = new Dictionary<string,Validator>();
 
         private void Init()
@@ -26,15 +21,14 @@ namespace Project.ValidationFarmework.validator
             Init();
         }
 
-        private static bool CheckValidatorType(string strTypeValidator)
+        private bool CheckValidatorType(string strTypeValidator)
         {
 
             return validatorMap.ContainsKey(strTypeValidator);
         }
 
-        public static Validator create(string strTypeValidator)
+        public Validator create(string strTypeValidator)
         {
-            Console.WriteLine(strTypeValidator);
             if (CheckValidatorType(strTypeValidator))
                 return validatorMap[strTypeValidator];
             return null;

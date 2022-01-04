@@ -1,5 +1,7 @@
 ﻿using Project.ValidationFarmework.validation;
+using Project.ValidationFarmework.violation;
 using System;
+using System.Collections.Generic;
 
 namespace Project
 {
@@ -8,16 +10,12 @@ namespace Project
         static void Main(string[] args)
         {
             User user = new User("phlonghcmus@gmail.com","Phạm Hoàng Long");
-            /*            foreach (var thuoctinh in user.GetType().GetProperties())
-                        {
-                            Console.WriteLine(thuoctinh.Name);
-                            foreach (Attribute attr in thuoctinh.GetCustomAttributes(false))
-                            {
-                                Console.WriteLine(attr.GetType().Name);
-                            }
-                        }*/
             Validation validation = new Validation();
-            validation.validate(user);
+            HashSet<IViolation> violations = validation.validate(user);
+            foreach (IViolation violation in violations)
+            {
+                Console.WriteLine(violation.getProp()+ "-->"+violation.getMessage());
+            }    
         }
     }
 }
