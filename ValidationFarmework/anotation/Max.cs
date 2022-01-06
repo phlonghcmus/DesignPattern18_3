@@ -9,5 +9,8 @@ namespace Project.ValidationFarmework.anotation
     public class Max : Anotation
     {
         public int Length { get; set; }
+
+       
+
     }
 }

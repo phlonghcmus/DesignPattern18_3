@@ -15,6 +15,7 @@ namespace Project.ValidationFarmework.validator
             validatorMap.Clear();
             validatorMap.Add("Required", new RequiredValidator());
             validatorMap.Add("Min", new MinValidator());
+            validatorMap.Add("Email", new EmailValidator());
         }
         public ValidatorFactory()
         {

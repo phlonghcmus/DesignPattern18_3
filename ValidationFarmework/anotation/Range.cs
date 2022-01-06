@@ -10,5 +10,7 @@ namespace Project.ValidationFarmework.anotation
     {
         public int LengthMax { get; set; }
         public int LengthMin { get; set; }
+
+        
     }
 }

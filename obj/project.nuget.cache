@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "TG0wxbw8d8ZyftVf4ypqknZJIu6CmRTAPnoXny8092lIHNfRbxR2S/SpHHGBc0GUCwYqvk0aQGpOk2xQ01h6tQ==",
+  "dgSpecHash": "J4abS6J33iO2uBWkcXDixgiyPm6ATnwP1mI55GfIuPCnXs+KMPs9hMxzTHwbku/889tichUYaFfGaAKEp/8lRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\phlon\\OneDrive\\Desktop\\Project\\Project.csproj",
+  "projectFilePath": "D:\\Download\\Education\\DesignPattern\\Project\\Project.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\phlon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+    "C:\\Users\\v\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512",
+    "C:\\Users\\v\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\v\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\v\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

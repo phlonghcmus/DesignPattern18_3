@@ -9,13 +9,13 @@ namespace Project
     {
         static void Main(string[] args)
         {
-            User user = new User("phlonghcmus@gmail.com","Phạm Hoàng Long");
+            User user = new User("phlonghcmusgmail","Phạm Hoàng Long");
             Validation validation = new Validation();
             HashSet<IViolation> violations = validation.validate(user);
             foreach (IViolation violation in violations)
             {
                 Console.WriteLine(violation.getProp()+ "-->"+violation.getMessage());
-            }    
+            }
         }
     }
 }
