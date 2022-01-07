@@ -9,7 +9,7 @@ namespace Project
     {
         static void Main(string[] args)
         {
-            User user = new User("phlonghcmusgmail","Phạm Hoàng Long");
+            User user = new User("phlonghcmusgmail","Long");
             Validation validation = new Validation();
             HashSet<IViolation> violations = validation.validate(user);
             foreach (IViolation violation in violations)

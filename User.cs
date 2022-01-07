@@ -18,7 +18,7 @@ namespace Project
         [Required(ErrorMessage = "Email là bắt buộc")]
         [Email(ErrorMessage = "Phải đúng định dạng email (có chứa @)")]
         public string email { get ; set; }
-        [Min(Length = 8,ErrorMessage = "Phải dài tối thiểu 8 ký tự")]
+        [Range(LengthMin = 8, LengthMax = 50, ErrorMessage = "Phải dài từ 8-50 ký tự")]
         public string name { get; set; }
     }
 }
