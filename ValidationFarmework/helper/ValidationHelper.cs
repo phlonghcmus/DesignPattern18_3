@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace Project.ValidationFarmework.helper
 {
@@ -36,6 +37,13 @@ namespace Project.ValidationFarmework.helper
         public bool IsValidEmailVersion2(string email)
         {
             return new EmailAddressAttribute().IsValid(email);
+        }
+
+
+        public static bool IsValidPhone(string phone)
+        {
+            return Regex.IsMatch(phone, @"(84|0[3|5|7|8|9])+([0-9]{8})\b");
+
         }
     }
 }
