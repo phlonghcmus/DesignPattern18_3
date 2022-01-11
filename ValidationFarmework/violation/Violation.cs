@@ -2,7 +2,7 @@
 
 namespace Project.ValidationFarmework.violation
 {
-    public interface IViolation
+    public interface Violation
     {
         void setMessage(string message);
         void setValid(bool valid);

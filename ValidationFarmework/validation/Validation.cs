@@ -10,13 +10,22 @@ namespace Project.ValidationFarmework.validation
 {
     public class Validation
     {
+        private static Validation _instance;
         public Validation()
         {
         }
-
-        public HashSet<IViolation> validate(Object o)
+        public static Validation GetInstance()
         {
-            HashSet<IViolation> violations = new HashSet<IViolation>();
+            if(_instance == null)
+            {
+                _instance = new Validation();
+            }
+            return _instance;
+        }
+
+        public HashSet<Violation> validate(Object o)
+        {
+            HashSet<Violation> violations = new HashSet<Violation>();
             foreach (var item in o.GetType().GetProperties())
             {
                 object[] annotations = item.GetCustomAttributes(false);
@@ -24,7 +33,7 @@ namespace Project.ValidationFarmework.validation
                 {
                     ValidatorFactory validatorFactory = new ValidatorFactory();
                     Validator validator = validatorFactory.create(attr.GetType().Name);
-                    IViolation violation = validator.validate(item, o);
+                    Violation violation = validator.validate(item, o);
                     if (violation.getValid() == false)
                     {
                         violations.Add(violation);

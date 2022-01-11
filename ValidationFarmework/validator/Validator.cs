@@ -10,10 +10,10 @@ namespace Project.ValidationFarmework.validator
 {
     public abstract class Validator
     {
-       public IViolation validate(PropertyInfo prop, object o)
+       public Violation validate(PropertyInfo prop, object o)
        {
             Object value = prop.GetValue(o);
-            IViolation violation = new CViolation(prop.Name,value);
+            Violation violation = new ImplViolation(prop.Name,value);
             if (this.invalid(prop, value))
             {
                 violation.setMessage(this.getMessage(prop));

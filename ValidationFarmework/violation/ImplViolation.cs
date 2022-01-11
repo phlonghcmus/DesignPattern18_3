@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Project.ValidationFarmework.violation
 {
-    public class CViolation : IViolation
+    public class ImplViolation : Violation
     {
         private string prop;
         private object value;
         private string messeage;
         private bool valid = true;
 
-        public CViolation(string prop, object value)
+        public ImplViolation(string prop, object value)
         {
             this.prop = prop;
             this.value = value;
