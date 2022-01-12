@@ -2,6 +2,7 @@
 using Project.ValidationFarmework.violation;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Project
 {
@@ -9,12 +10,13 @@ namespace Project
     {
         static void Main(string[] args)
         {
-            User user = new User("phlonghcmusgmail","Phạm Hoàng Long", "113");
+            Console.OutputEncoding = Encoding.UTF8;
+            User user = new User("", "Phạm Hoàng Long", "113");
             Validation validation = new Validation();
             HashSet<Violation> violations = validation.validate(user);
             foreach (Violation violation in violations)
             {
-                Console.WriteLine(violation.getProp()+ "-->"+violation.getMessage());
+                Console.WriteLine(violation.getProp() + "-->" + violation.getMessage());
             }
         }
     }

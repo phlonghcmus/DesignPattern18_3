@@ -10,11 +10,11 @@ namespace Project
 {
     public class User
     {
-        public User(string email, string name,string phone)
+        public User(string taikhoan, string matkhau,string email)
         {
-            this.email = email;
-            this.name = name;
-            this.Phone = phone;
+            this.email = taikhoan;
+            this.name = matkhau;
+            this.Phone = email;
         }
         [Required(ErrorMessage = "Email là bắt buộc")]
         [Email(ErrorMessage = "Phải đúng định dạng email (có chứa @)")]
