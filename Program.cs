@@ -11,8 +11,8 @@ namespace Project
         {
             User user = new User("phlonghcmusgmail","Phạm Hoàng Long", "113");
             Validation validation = new Validation();
-            HashSet<IViolation> violations = validation.validate(user);
-            foreach (IViolation violation in violations)
+            HashSet<Violation> violations = validation.validate(user);
+            foreach (Violation violation in violations)
             {
                 Console.WriteLine(violation.getProp()+ "-->"+violation.getMessage());
             }
